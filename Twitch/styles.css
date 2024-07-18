@@ -6,6 +6,25 @@ body{
     padding: 0;
     font-family: "Helvetica", sans-serif;
 }
+/* WebKit Tabanlı Tarayıcılar için */
+::-webkit-scrollbar {
+    width: 12px;
+    scrollbar-color:#888 ;
+}
+
+::-webkit-scrollbar-track {
+    scrollbar-color:#888 ;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;   
+}
+
+/* Firefox için */
+html {
+    scrollbar-color: #888;
+    scrollbar-width: thin;
+}
 .top_bar{
     width: 100%;
     height: 50px;
@@ -212,20 +231,25 @@ margin-top: 1px;
     display: flex;
     margin-left: 10px;
     z-index: 1;
+    transition:  0.3s;
+    border-radius: 5px;
 }
 .video:hover{
+    transition: 0.3s;
     box-shadow: -4px 4px #6803ff;
-    transform: translate(5px, -5px);
+    transform: translate(4px, -4px);
 }
 
 .video1{
     width: 301px;
     display: flex;
     margin-left: 10px;
+    border-radius: 5px;
 }
 .video1:hover{
     box-shadow: -4px 4px #03ff3a;
     transform: translate(5px, -5px);
+    transition: 0.3s;
 }
 .logo{
     width: 40px;
@@ -319,11 +343,13 @@ margin-top: 1px;
     width: 145px;
     display: block;
     margin-left: 10px;
-    
+    border-radius: 5px;
+
 }
 .kategoriler img:hover{
     box-shadow: -4px 4px red;
     transform: translate(5px, -5px);
+    transition: 0.3s;
 }
 .kategoriler_adi{
     color: white;
@@ -365,4 +391,5 @@ margin-top: 1px;
     .kanal_oneri{
         width: 60px;
     }
+    
 }
