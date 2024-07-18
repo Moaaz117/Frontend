@@ -134,15 +134,30 @@ z-index: 2;
 width: 240.5px;
 height: 470px;
 background-color: #1F1F23;
-margin-top: 20px;
-
+margin-top: 50px;
 }
-
+.hidden {
+    display: none;
+}
 .kanal_oneri{
     width: 240px;
     height: 42px;
     align-items: center;
     display: block;
+}
+.container_left button{
+    color: white;
+    background-color: transparent;
+    border: 1px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+    margin-left: 200px;
+}
+.container_left button:hover{
+    background-color: #34343B;
 }
 .kanal_oneri:hover{
     background-color: #34343B;
@@ -151,7 +166,7 @@ margin-top: 20px;
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    margin-top: 10px;
+    
     margin-left: 10px;
     margin-bottom: 10px;
     display: flex;
@@ -383,6 +398,7 @@ margin-top: 20px;
         width: 60px;
         height: 100%;
         padding-bottom: 5px;
+        padding-top: 30px;    
     }
     .container_left p,.kanal_adi_left,.kanal_adi_left,
     .viewers_left,.container_left svg,.kategori_left{
@@ -392,5 +408,7 @@ margin-top: 20px;
     .kanal_oneri{
         width: 60px;
     }
-    
+    .container_left button{
+        margin-left: 15px;
+    }
 }
