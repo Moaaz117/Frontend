@@ -6,21 +6,7 @@ body{
     padding: 0;
     font-family: "Helvetica", sans-serif;
 }
-/* WebKit Tabanlı Tarayıcılar için */
-::-webkit-scrollbar {
-    width: 12px;
-    scrollbar-color:#888 ;
-}
 
-::-webkit-scrollbar-track {
-    scrollbar-color:#888 ;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;   
-}
-
-/* Firefox için */
 html {
     scrollbar-color: #888;
     scrollbar-width: thin;
@@ -79,7 +65,9 @@ html {
     border-radius: 8px;
     padding-left: 10px;
     z-index: 2;
+    
 }
+
 .orta_bar i{
     width: 20px;
     color: white;
@@ -99,6 +87,17 @@ html {
     border-radius: 8px;
     cursor: pointer;
     font-weight:bold;
+}
+.right_bar i{
+    color: white;
+    margin-right: 20px;
+    padding: 5px;
+    border: 1px ;
+    border-radius: 5px;
+}
+.right_bar i:hover{
+    background-color: #34343B;
+
 }
 .Oturum_Ac{
     width: 87.5px;
@@ -143,13 +142,13 @@ z-index: 2;
 }
 .container_left{
 width: 240.5px;
-height: 470px;
+height: 100%;
 background-color: #1F1F23;
 margin-top: 50px;
+position: fixed;
+
 }
-.hidden {
-    display: none;
-}
+
 .kanal_oneri{
     width: 240px;
     height: 42px;
@@ -232,7 +231,8 @@ margin-top: 50px;
 .container_right{
     height: 100%;
     width: 100%;
-    margin-left: 20px;
+    margin-left: 250px;
+    margin-top: 50px;
 
 }
 .container_right p{
@@ -312,7 +312,7 @@ margin-top: 50px;
     padding-bottom: 2px;
     margin-top: 140px;
     margin-left: 20px;
-    
+    z-index: 4;
 }
 .aciklama{
     display: block;
@@ -360,6 +360,7 @@ margin-top: 50px;
     height: 1%;
     margin: 10px 16px;
     opacity: 30%;
+    max-width: 500px;
 }
 .kategoriler{
     width: 100%;
@@ -397,6 +398,48 @@ margin-top: 50px;
     display: block;
     margin-left: 10px;
     margin-top: 5px;
+}
+.footer{
+    background-color: #451093;
+    display: flex;
+    position: fixed;
+    border-radius: 5px;
+    
+    height: 65px;
+    width: 100% ;
+    color: white;  
+    z-index: 6; 
+    align-items: center;
+    padding-left: 15px;
+    bottom: 0;
+    
+}
+.footer_left{
+    display: flex;
+    align-items: center;
+    padding-right: 150px;
+}
+.footer p{
+    display: flex;
+    margin-left: 20px;
+    font-size: 18px;
+    width: auto;
+   
+}
+.footer h3{
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+}
+.footer button{
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Inter", "Roobert", "Helvetica Neue", Helvetica, Arial, sans-serif;    margin-left: 80px;
+    
+    justify-content: end;
+    position: absolute;
+    right: 60px;
 }
 @media (max-width: 1305px) {
     body {
