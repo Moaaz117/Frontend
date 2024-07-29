@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(win7.jpg);
+}
+
+.main_container {
+    width: 100%;
+    display: flex;
+    gap:100px;
+    justify-content: center;
+}
+
+.container_left {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: rgba(28, 27, 27, 0.6);
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.6;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+
+}
+
+i {
+    width: 30px;
+    background-color: rgba(28, 27, 27, 0.6);
+    color: white;
+    padding: 10px 5px 10px 5px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+i:hover {
+    background-color: rgb(28, 27, 27);
+}
+i:active {
+    background-color: rgb(0, 0, 0);
+}
+.search_bar {
+    margin-top: 15px;
+}
+.bilgiler_left{
+    margin-top: 20px;
+    text-align: left;
+    color: white;
+   
+}
+.container_right {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: auto;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    display: none;
+}
+.gunler{
+    text-align: start;
+    margin-top: 30px;
+    padding-right: 60px;
+}
+#monday,#tuesday,#wednesday,#thursday,#friday{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+}
+#city,#derece,#durum,#hiz,#tarih{
+    margin-top: 20px;
+}
+#derece{
+    font-size: 35px;
+    font-weight: bold;
+}
+.Days{
+    display: flex;
+    justify-content: space-between;
+}
+img{
+    display: flex;
+    width: 50px;
+    margin-top: -15px;
+}
+p{
+    display: flex;
+}
+
+.right_durum{
+    width: 50px;
+}
+.right_day{
+    width: 90px;
+}
+.right_derece{
+    width: 70px;
+}
