@@ -219,9 +219,11 @@ body {
 }
 
 .modal-content input {
-  width: 100%;
+  width: 90%;
   margin: 10px 0;
   padding: 8px;
+  border-radius: 5px;
+  border: 3px solid blue;
 }
 
 .modal-buttons {
