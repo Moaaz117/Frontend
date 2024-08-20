@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Poppins:wght@300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 75.5%;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(235, 201, 8, 0.87) rgba(2, 128, 247, 0.712);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 500px;
+  color: #D4B996FF;
+  box-shadow: 0 5px 10px #D4B996FF;
+  position: relative;
+
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(bg1.jpg);
+  background-repeat: repeat-x;
+  background-size: 900px;
+  clip-path: circle(60% at left 300px);
+}
+
+.row2 {
+  text-align: center;
+  margin-right: 10%;
+  top: 10px;
+  right: 150px;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.mod-btn {
+  background-color: rgba(0, 0, 0, 0.767);
+  border-radius: 5px;
+  border: 0;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+  margin-top: -20px;
+  position: fixed;
+  z-index: 3;
+  margin-left: 12%;
+  transition: .5s;
+  width: 140px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mod-btn:hover {
+  transform: scale(1.2);
+  background-color: #000000;
+}
+
+.row2 h2 {
+  font-size: 3rem;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.row2 img {
+  margin-top: 30px;
+  width: 250px;
+
+}
+
+.row1 {
+  width: auto;
+  max-width: 600px;
+  z-index: 1;
+}
+
+.row1 h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-left: 35px;
+  font-family: 'Bodoni Moda', serif;
+}
+
+.new-book {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: .5s;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.new-book:hover {
+  transform: scale(1.3);
+  background-color: #24a0ed;
+  color: white;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search input {
+  outline: 0;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  width: 350px;
+  height: 35px;
+  padding: 0 0.5rem;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.search button {
+  outline: none;
+  border: none;
+  height: 35px;
+  padding: 0 0.5rem;
+}
+
+.container {
+  width: 65%;
+  margin: 0 auto;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
+  grid-gap: 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #D4B996FF;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 5px rgba(212, 185, 150, .5);
+  transition: .5s;
+  text-align: center;
+  position: relative;
+  width: 180px;
+}
+
+.card:hover {
+  transform: scale(0.9);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 1rem 1rem 0 0;
+  width: 160px;
+  box-shadow: 4px 4px #3e464ba4;
+}
+
+.card .bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .bottom .title {
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.card .bottom .amount {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background-color: rgb(143, 88, 51);
+  color: #D4B996FF;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0.2rem;
+}
+
+.overlay {
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.overlay-inner {
+  background: white;
+  width: 700px;
+  height: 550px;
+  padding: 1.5rem;
+  position: relative;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(235, 201, 8, 0.87) rgb(204, 40, 11);
+  font-size: 1.3rem;
+}
+
+.overlay-inner .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.overlay-inner .inner-box {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.overlay-inner .inner-box img {
+  margin-right: 20px;
+  width: 150px;
+  height: 200px;
+}
+
+.overlay-inner .inner-box h3 {
+  margin-top: 10px;
+  color: green;
+}
+
+.overlay-inner .inner-box h4 {
+  color: blue;
+}
+
+.overlay-inner .inner-box button {
+  outline: none;
+  border: none;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #24a0ed;
+  color: white;
+  font-weight: bold;
+  padding: 0.3rem 0.5rem;
+}
+
+.overlay-inner .description {
+  margin-top: 2rem;
+  text-align: justify;
+  font-size: 13px;
+}
+.dark-mod {
+  background-color: black;
+}
+
+.light-mod {
+  background-color: rgb(143, 88, 51);
+}
+
+.dark-mod .row1{
+  z-index: 1;
+}
+.dark-mod h1,
+.dark-mod h2,
+.dark-mod h4 {
+  color: white;
+  
+}
+
+.dark-mod .header::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(bg1.jpg);
+  background-repeat: repeat-x;
+  background-size: 900px;
+  clip-path: circle(60% at left 300px);
+  
+}
+
+.dark-mod .mod-btn {
+  background-color: rgba(255, 255, 255, 0.767);
+  border-radius: 5px;
+  border: 0;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  margin-top: -20px;
+  position: fixed;
+  z-index: 3;
+  margin-left: 12%;
+  transition: .5s;
+  width: 140px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dark-mod .mod-btn:hover {
+  transform: scale(1.2);
+  background-color: #ffffff;
+}
+.dark-mod .overlay{
+  background: linear-gradient(rgba(255, 255, 255, 0.068), rgba(255, 255, 255, 0.068));
+}
+.dark-mod .overlay-inner {
+  background-color: black;
+  
+}
+.dark-mod .overlay-inner .close{
+  color: white;
+}
+.dark-mod .card {
+  background-color: #D4B996FF;
+  box-shadow: 0 5px 5px rgba(255, 0, 0, 0.904);
+}
